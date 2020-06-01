@@ -4,8 +4,7 @@
 \alias{printMessage}
 \title{Stand out message printing}
 \usage{
-printMessage(message = "", width = 80, fillChar = "#",
-  justify = "m")
+printMessage(message = "", width = 80, fillChar = "#", justify = "m")
 }
 \arguments{
 \item{message}{The message to print.}
