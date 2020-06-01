@@ -66,6 +66,12 @@ paperLightBlue <- "#6BAED6"
 
 # PLOT FUNCTIONS #######################################################################################################
 
+#' A function to show colors in a plot.
+#'
+#' @param colors A list of colors to plot.
+#' @examples
+#' plotColors("red", "white", "blue")
+#' @export
 plotColors <- function(colors) {
     n <- length(colors)
     image(x = 1:n,
