@@ -4,7 +4,7 @@
 #' Colorblind palette
 #'
 #' @export
-cbPalette <- c("#0072B2", "#D55E00", "grey70", "#009E73", "#E69F00", "#CC79A7", "#56B4E9", "#F0E442")
+cbPalette <- c("#0072B2", "#D55E00", "#B3B3B3", "#009E73", "#E69F00", "#CC79A7", "#56B4E9", "#F0E442")
 
 #' Paper categorical color palette
 #'
@@ -70,7 +70,7 @@ paperLightBlue <- "#6BAED6"
 #'
 #' @param colors A list of colors to plot.
 #' @examples
-#' plotColors("red", "white", "blue")
+#' plotColors(c("red", "white", "blue"))
 #' @export
 plotColors <- function(colors) {
     n <- length(colors)

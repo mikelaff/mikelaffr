@@ -13,5 +13,5 @@ plotColors(colors)
 A function to show colors in a plot.
 }
 \examples{
-plotColors("red", "white", "blue")
+plotColors(c("red", "white", "blue"))
 }
