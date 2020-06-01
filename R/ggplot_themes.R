@@ -64,7 +64,7 @@ plotTheme <- function(theme = "basic", ...) {
     }
 }
 
-#' Colorblind palette
-#'
-#' @export
-cbPalette <- c("#0072B2", "#D55E00", "grey70", "#009E73", "#E69F00", "#CC79A7", "#56B4E9", "#F0E442")
+# Colorblind palette
+#
+# @export
+# cbPalette <- c("#0072B2", "#D55E00", "#B3B3B3", "#009E73", "#E69F00", "#CC79A7", "#56B4E9", "#F0E442")
