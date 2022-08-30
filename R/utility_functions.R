@@ -5,24 +5,25 @@
 #' This function is designed to make printing flagposts and status messages easier
 #' to see against many output messages.
 #'
-#' @param message The message to print.
-#' @param width Width, in characters, for the final message.
-#' @param fillChar Character used for padding message to fill the width required.
+#' @param message The message to print. Passed directly to `base::print()`. Defaults to the empty character string, `""`.
+#' @param width The number of characters in width for the final message. Defaults to 80.
+#' @param fillChar Character used for padding message to fill the width required. Defaults to `"#"`.
 #' @param justify One of "l", "m", or "r" to justify the message on the left, middle,
-#'     or right side of the output line.
+#'     or right side of the output line. Defaults to "l".
 #' @examples
 #' printMessage("hi")
 #' @export
-printMessage <- function(message = "", width = 80, fillChar = "#", justify = "m") {
+printMessage <- function(message = "", width = 80, fillChar = "#", justify = "m", ...) {
 
     if (nchar(message) >= width) {
         # if message is longer than width, print plain message
-        print(message)
+        print(message, ...)
     } else if (nchar(message) == 0) {
         # if message is blank, print character line
         print(stringr::str_pad(string = message,
                                width = width,
-                               pad = fillChar))
+                               pad = fillChar),
+              ...)
     } else if (justify == "l") {
         # add whitespace to end of string
         message <- paste(message, " ", sep="")
@@ -30,7 +31,8 @@ printMessage <- function(message = "", width = 80, fillChar = "#", justify = "m"
         print(stringr::str_pad(string = message,
                                width = width,
                                side = "right",
-                               pad = fillChar))
+                               pad = fillChar),
+              ...)
     } else if (justify == "r") {
         # add whitespace to beginning of string
         message <- paste(" ", message, sep="")
@@ -38,7 +40,8 @@ printMessage <- function(message = "", width = 80, fillChar = "#", justify = "m"
         print(stringr::str_pad(string = message,
                                width = width,
                                side = "left",
-                               pad = fillChar))
+                               pad = fillChar),
+              ...)
     } else {
         # add whitespace to beginning and end of string
         message <- paste(" ", message, " ", sep="")
@@ -46,7 +49,8 @@ printMessage <- function(message = "", width = 80, fillChar = "#", justify = "m"
         print(stringr::str_pad(string = message,
                                width = width,
                                side = "both",
-                               pad = fillChar))
+                               pad = fillChar),
+              ...)
     }
 }
 

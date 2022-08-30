@@ -4,17 +4,17 @@
 \alias{printMessage}
 \title{Stand out message printing}
 \usage{
-printMessage(message = "", width = 80, fillChar = "#", justify = "m")
+printMessage(message = "", width = 80, fillChar = "#", justify = "m", ...)
 }
 \arguments{
-\item{message}{The message to print.}
+\item{message}{The message to print. Passed directly to \code{base::print()}. Defaults to the empty character string, \code{""}.}
 
-\item{width}{Width, in characters, for the final message.}
+\item{width}{The number of characters in width for the final message. Defaults to 80.}
 
-\item{fillChar}{Character used for padding message to fill the width required.}
+\item{fillChar}{Character used for padding message to fill the width required. Defaults to \code{"#"}.}
 
 \item{justify}{One of "l", "m", or "r" to justify the message on the left, middle,
-or right side of the output line.}
+or right side of the output line. Defaults to "l".}
 }
 \description{
 This function is designed to make printing flagposts and status messages easier
