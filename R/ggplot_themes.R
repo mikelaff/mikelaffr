@@ -15,7 +15,7 @@ plotTheme <- function(theme = "basic", ...) {
                                                                    color = "black",
                                                                    size = 1),
                           panel.grid = ggplot2::element_blank(),
-                          text = element_text(family = "Arial"))
+                          text = element_text(family = "Helvetica"))
 
     if (theme == "presentation") { # presentation theme
         tmp +
